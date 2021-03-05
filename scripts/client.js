@@ -1,14 +1,13 @@
-$ (document).ready(onReady)
+$ (document).ready(onReady);
 
 let employeeInfo = [];
 
 function onReady(){
     console.log('JQ');
- $('#submitButton').on('click', getInfo)   
+ $('#submitButton').on('click', getInfo) ;  
 }//end onready
 
 function getInfo(){
-  console.log('Clicked!'); 
   const firstName = $('#firstNameInput').val();
   const lastName = $('#lastNameInput').val();
   const id = $('#idInput').val();
@@ -23,7 +22,15 @@ function getInfo(){
     salary: salary
 }//endEmployeeObject
   
-employeeInfo.push(employeeObject)
+employeeInfo.push(employeeObject);
+//target ul by id
+let el = $('#employeeInfoOut');
+//empty it
+el.empty();
+//loop through array
+for (let i = 0; i < employeeInfo.length; i++) {
+el.append(`${employeeInfo[i].firstName}`);   
+}//end for
 
 
 $('#firstNameInput').val('');
