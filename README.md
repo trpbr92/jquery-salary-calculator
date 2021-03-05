@@ -10,8 +10,8 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 
 
 [x] -Create inputs First Name, Last Name, ID, Title, Annual Salary
-[ ] -Create submit button to collect form info and push info and objects into array
-[ ] -Calculate monthly costs
-[ ] -Append info to DOM
-[ ] -Add red background color to total monthly cost if total monthly cost is over $20,000
-[ ] -Create delete button to remove employees from DOM 
+[x] -Create submit button to collect form info and push info and objects into array
+[] -Calculate monthly costs
+[] -Append info to DOM
+[] -Add red background color to total monthly cost if total monthly cost is over $20,000
+[] -Create delete button to remove employees from DOM 

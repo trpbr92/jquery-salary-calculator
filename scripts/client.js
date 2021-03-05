@@ -11,13 +11,20 @@ function getInfo(){
   console.log('Clicked!'); 
   const firstName = $('#firstNameInput').val();
   const lastName = $('#lastNameInput').val();
+  const id = $('#idInput').val();
+  const title = $('#titleInput').val();
+  const salary = $('#salaryInput').val();
+
   employeeObject = {
     firstName: firstName,
-    lastName: lastName
-  }//endEmployeeObject
+    lastName: lastName,
+    id: id,
+    title: title,
+    salary: salary
+}//endEmployeeObject
   
-  employeeInfo
-  el = $()
+employeeInfo.push(employeeObject)
+
 
 $('#firstNameInput').val('');
 $('#lastNameInput').val('');
