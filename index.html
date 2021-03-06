@@ -4,25 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JQuery Salary Calculator</title>
+    <title>Trace's JQuery Salary Calculator</title>
     <script src="vendors/jquery.js"></script>
     <script src="scripts/client.js"></script>
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <h1>Salary Calculator</h1>
-    <div>
+        <h1>Salary Calculator</h1>
+    <div id="input">
         <h2>Add Employee</h2>
-    <input type="text" id="firstNameInput" placeholder="First Name">
-    <input type="text" id="lastNameInput" placeholder="Last Name">
-    <input type="text" id="idInput" placeholder="ID">
-    <input type="text" id="titleInput" placeholder=" Title">
-    <input type="text" id="salaryInput" placeholder=" Salary">
-    <button id="submitButton">Submit</button>
+            <input type="text" id="firstNameInput" placeholder="First Name">
+            <input type="text" id="lastNameInput" placeholder="Last Name">
+            <input type="text" id="idInput" placeholder="ID">
+            <input type="text" id="titleInput" placeholder=" Title">
+            <input type="text" id="salaryInput" placeholder=" Salary">
+            <button id="submitButton">Submit</button>
     </div>
-<div>
-    <h2>Employees</h2>
-    <ul id=employeeInfoOut></ul>
-</div>
+    <div id="output">
+        <h2>Employees</h2>
+        <ul id=employeeInfoOut></ul>
+        <ul id="totalMonthlyOut"></ul>
+    </div>
 </body>
 </html>

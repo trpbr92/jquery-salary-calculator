@@ -8,31 +8,21 @@ function onReady(){
 }//end onready
 
 function getInfo(){
-  const firstName = $('#firstNameInput').val();
-  const lastName = $('#lastNameInput').val();
-  const id = $('#idInput').val();
-  const title = $('#titleInput').val();
-  const salary = $('#salaryInput').val();
-
+  console.log('in getInfo');
+  //create object with employee information
   employeeObject = {
-    firstName: firstName,
-    lastName: lastName,
-    id: id,
-    title: title,
-    salary: salary
+    firstName: $('#firstNameInput').val(),
+    lastName: $('#lastNameInput').val(),
+    id: $('#idInput').val(),
+    title: $('#titleInput').val(),
+    salary: $('#salaryInput').val()
 }//endEmployeeObject
-  
+  //push object into employeeInfo
 employeeInfo.push(employeeObject);
-//target ul by id
-let el = $('#employeeInfoOut');
-//empty it
-el.empty();
-//loop through array
-for (let i = 0; i < employeeInfo.length; i++) {
-el.append(`<ul> ${employeeInfo[i].firstName} ${employeeInfo[i].lastName} ${employeeInfo[i].id} ${employeeInfo[i].title} ${employeeInfo[i].salary}</ul>`);   
-}//end for
-
-
+//update the DOM
+displayInfo();
+//update total monthly cost
+//empty text inputs
 $('#firstNameInput').val('');
 $('#lastNameInput').val('');
 $('#idInput').val('');
@@ -40,3 +30,27 @@ $('#titleInput').val('');
 $('#salaryInput').val('');
 }//end getInfo
 
+function displayInfo(){
+  console.log('in displayInfo');
+//target ul by id
+let el = $('#employeeInfoOut');
+//empty it
+el.empty();
+//loop through array
+for (let i = 0; i < employeeInfo.length; i++) {
+el.append(`<ul> ${employeeInfo[i].firstName} ${employeeInfo[i].lastName} ${employeeInfo[i].id} ${employeeInfo[i].title} $${employeeInfo[i].salary}</ul>`);   
+}//end for
+let mCost = $('#totalMonthlyOut')
+mCost.empty();
+mCost.append(`<ul>$${totalMonthly()} </ul>`)
+}//end displayInfo
+
+function totalMonthly(){
+  console.log('in totalMontly');
+  let monthlyCost = 0;
+  //loop through employee info for annual salary info
+  for (let i = 0; i < employeeInfo.length; i++) {
+    monthlyCost += Number(employeeInfo[i].salary)
+  }//end for
+  return monthlyCost /= 12;
+}//end totalMontly
