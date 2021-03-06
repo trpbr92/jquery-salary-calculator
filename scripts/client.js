@@ -29,7 +29,7 @@ let el = $('#employeeInfoOut');
 el.empty();
 //loop through array
 for (let i = 0; i < employeeInfo.length; i++) {
-el.append(`${employeeInfo[i].firstName}`);   
+el.append(`<ul> ${employeeInfo[i].firstName} ${employeeInfo[i].lastName} ${employeeInfo[i].id} ${employeeInfo[i].title} ${employeeInfo[i].salary}</ul>`);   
 }//end for
 
 
