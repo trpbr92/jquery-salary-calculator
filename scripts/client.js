@@ -4,7 +4,7 @@ let employeeInfo = [];
 
 function onReady(){
     console.log('JQ');
- $('#submitButton').on('click', getInfo) ;  
+ $('#submitButton').on('click', getInfo);
 }//end onready
 
 function getInfo(){
@@ -52,5 +52,13 @@ function totalMonthly(){
   for (let i = 0; i < employeeInfo.length; i++) {
     monthlyCost += Number(employeeInfo[i].salary)
   }//end for
+    //add red background to total monthly if exceeds $20,000
+  if (monthlyCost > 240000) {
+    $('#totalMonthlyOut').css("background-color","red"); 
   return monthlyCost /= 12;
-}//end totalMontly
+}// end if
+else{
+  return monthlyCost /= 12;
+}//end else
+  }//end totalMontly
+  
