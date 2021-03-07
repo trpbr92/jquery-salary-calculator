@@ -14,4 +14,4 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 [x] -Calculate monthly costs
 [x] -Append info to DOM
 [x] -Add red background color to total monthly cost if total monthly cost is over $20,000
-[] -Create delete button to remove employees from DOM 
+[x] -Create delete button to remove employees from DOM 

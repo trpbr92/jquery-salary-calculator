@@ -21,7 +21,7 @@ function getInfo(){
   //push object into employeeInfo
 employeeInfo.push(employeeObject);
 //update the DOM
-displayInfo();
+displayInfo(employeeObject);
 //update total monthly cost
 //empty text inputs
 $('#firstNameInput').val('');
@@ -29,26 +29,24 @@ $('#lastNameInput').val('');
 $('#idInput').val('');
 $('#titleInput').val('');
 $('#salaryInput').val('');
+totalMonthly();   
+
 }//end getInfo
 
-function displayInfo(){
+function displayInfo(objects){
   console.log('in displayInfo');
 //target ul by id
 let el = $('#employeeInfoOut');
 //empty it
-el.empty();
-//loop through array
-for (let i = 0; i < employeeInfo.length; i++) {
 el.append(
 `<tr> 
-<td>${employeeInfo[i].firstName}</td> 
-<td>${employeeInfo[i].lastName}</td> 
-<td>${employeeInfo[i].id}</td> 
-<td>${employeeInfo[i].title}</td> 
-<td>$${employeeInfo[i].salary}</td>
+<td>${objects.firstName}</td> 
+<td>${objects.lastName}</td> 
+<td>${objects.id}</td> 
+<td>${objects.title}</td> 
+<td>$${objects.salary}</td>
 <td><button id="deleteButton">Delete</button></td>
-</tr>`);   
-}//end for
+</tr>`);
 let mCost = $('#totalMonthlyOut')
 mCost.empty();
 mCost.append(`<ul>$${totalMonthly()}</ul>`)
@@ -73,5 +71,5 @@ else{
   
   function deleteButton(){
     console.log('in deleteButton');
-
+  $(this).parent().parent().remove();
 }//end deleteButton
