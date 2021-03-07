@@ -38,11 +38,18 @@ let el = $('#employeeInfoOut');
 el.empty();
 //loop through array
 for (let i = 0; i < employeeInfo.length; i++) {
-el.append(`<ul> ${employeeInfo[i].firstName} ${employeeInfo[i].lastName} ${employeeInfo[i].id} ${employeeInfo[i].title} $${employeeInfo[i].salary}</ul>`);   
+el.append(
+`<tr> 
+<td>${employeeInfo[i].firstName}</td> 
+<td>${employeeInfo[i].lastName}</td> 
+<td>${employeeInfo[i].id}</td> 
+<td>${employeeInfo[i].title}</td> 
+<td>$${employeeInfo[i].salary}</td>
+</tr>`);   
 }//end for
 let mCost = $('#totalMonthlyOut')
 mCost.empty();
-mCost.append(`<ul>$${totalMonthly()} </ul>`)
+mCost.append(`<ul>$${totalMonthly()}</ul>`)
 }//end displayInfo
 
 function totalMonthly(){
