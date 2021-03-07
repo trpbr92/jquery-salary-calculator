@@ -45,6 +45,7 @@ el.append(
 <td>${employeeInfo[i].id}</td> 
 <td>${employeeInfo[i].title}</td> 
 <td>$${employeeInfo[i].salary}</td>
+<td><button>Delete</button></td>
 </tr>`);   
 }//end for
 let mCost = $('#totalMonthlyOut')
