@@ -5,6 +5,7 @@ let employeeInfo = [];
 function onReady(){
     console.log('JQ');
  $('#submitButton').on('click', getInfo);
+ $('#employeeInfoOut').on('click','#deleteButton', deleteButton);
 }//end onready
 
 function getInfo(){
@@ -45,7 +46,7 @@ el.append(
 <td>${employeeInfo[i].id}</td> 
 <td>${employeeInfo[i].title}</td> 
 <td>$${employeeInfo[i].salary}</td>
-<td><button>Delete</button></td>
+<td><button id="deleteButton">Delete</button></td>
 </tr>`);   
 }//end for
 let mCost = $('#totalMonthlyOut')
@@ -70,3 +71,7 @@ else{
 }//end else
   }//end totalMontly
   
+  function deleteButton(){
+    console.log('in deleteButton');
+
+}//end deleteButton
